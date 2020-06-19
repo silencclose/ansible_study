@@ -1,0 +1,36 @@
+---
+##自动创建nginx用户,并安装相应依赖
+- hosts: testserver
+  remote_user: root
+  tasks:
+    - name: install gcc
+      yum: name={{ item }} state=present
+      with_items:
+      - openssl-devel
+      - pcre-devel
+      - gcc
+      - zlib-devel
+
+
+#上传nginx源码文件并进行编译
+- hosts: testserver
+  remote_user: root
+  tasks:
+    - name: upload nginx source
+      unarchive: src=/root/playhook/nginx-1.16.1.tar.gz dest=/opt
+    - name: configure nginx
+      shell: cd /opt/nginx-1.16.1;./configure --user=nginx --group=nginx --prefix=/opt/nginx --with-http_stub_status_module --with-http_ssl_module  --with-stream  --with-pcre;make&& make install
+
+#定义启动nginx
+- hosts: testserver
+  remote_user: root
+  tasks:
+    - name: upload nginx conf
+      copy: src=/root/playhook/nginx.conf dest=/opt/nginx/conf
+      notify: reload
+      tags: reloadnginx
+    - name: start nginx
+      shell: cd /opt/nginx/sbin; ./nginx
+  handlers: 
+    - name: reload
+      shell: cd /opt/nginx/sbin; ./nginx -s reload 
