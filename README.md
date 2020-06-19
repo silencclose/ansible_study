@@ -12,13 +12,13 @@
 
 # 命令工具介绍
 
-​    **ansible**：Ansibe AD-Hoc 临时命令执行工具，常用于临时命令的执行
-​    **ansible-doc**：Ansible 模块功能查看工具
-​    **ansible-galaxy**：载/上传优秀代码或Roles模块 的官网平台，基于网络的
-​    **ansible-playbook**：Ansible 定制自动化的任务集编排工具
-​    **ansible-pull**：Ansible远程执行命令的工具，拉取配置而非推送配置（使用较少，海量机器时使用，对运维的架构能力要求较高）
-​    **ansible-vault**：Ansible 文件加密工具
-​    **ansible-console**：Ansible基于Linux Consoble界面可与用户交互的命令执行工具
+- ​    **ansible**：Ansibe AD-Hoc 临时命令执行工具，常用于临时命令的执行
+- ​    **ansible-doc**：Ansible 模块功能查看工具
+- ​    **ansible-galaxy**：载/上传优秀代码或Roles模块 的官网平台，基于网络的
+- ​    **ansible-playbook**：Ansible 定制自动化的任务集编排工具
+- ​    **ansible-pull**：Ansible远程执行命令的工具，拉取配置而非推送配置（使用较少，海量机器时使用，对运维的架构能力要求较高）
+- ​    **ansible-vault**：Ansible 文件加密工具
+- ​    **ansible-console**：Ansible基于Linux Consoble界面可与用户交互的命令执行工具
 
 ## ansible命令
 
