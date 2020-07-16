@@ -57,20 +57,23 @@
 
 ## ansible常见模块
 
-| 模块名                         | 模块作用                                                     |
-| ------------------------------ | ------------------------------------------------------------ |
-| [ping](./module/ping.md)       | 主机连通性测试，如：`ansible all -m command -a "" -u root`   |
-| [command](./module/command.md) | 默认模块,这个模块可以直接在远程主机上执行命令，并将结果返回管理主机。不支持管道 |
-| [shell](./shell.md)            | 可以在远程主机上调用shell解释器运行命令，支持shell的各种功能，例如管道等 |
-| [copy](./module/copy.md)       | 用于将文件复制到远程主机，同时支持给定内容生成文件和修改权限等 |
-| [file](./module/file.md)       | 主要用于设置文件的属性，比如创建文件、创建链接文件、删除文件等 |
-| fetch                          | 用于从远程某主机获取（复制）文件到本地                       |
-| assemble                       | 将多份配置文件组装为一份配置文件                             |
-| cron                           | 适用于管理`cron`计划任务的                                   |
-| yum                            | 主要用于软件的安装                                           |
-| service                        | 服务管理                                                     |
-| user                           | 用户管理                                                     |
-| group                          | 组管理                                                       |
-| script                         | 用于执行客户端脚本                                           |
-| setup                          | 搜集信息，用来做监控分析                                     |
+| 模块名                                 | 模块作用                                                     |
+| -------------------------------------- | ------------------------------------------------------------ |
+| [ping](./module/ping.md)               | 主机连通性测试，如：`ansible all -m command -a "" -u root`   |
+| [command](./module/command.md)         | 默认模块,这个模块可以直接在远程主机上执行命令，并将结果返回管理主机。不支持管道 |
+| [shell](./shell.md)                    | 可以在远程主机上调用shell解释器运行命令，支持shell的各种功能，例如管道等 |
+| [copy](./module/copy.md)               | 用于将文件复制到远程主机，同时支持给定内容生成文件和修改权限等 |
+| [file](./module/file.md)               | 主要用于设置文件的属性，比如创建文件、创建链接文件、删除文件等 |
+| [fetch](./module/fetch.md)             | 用于从远程某主机获取（复制）文件到本地                       |
+| [assemble](./module/assemble.md)       | 将多份配置文件组装为一份配置文件                             |
+| [unarchive](./module/unarchive.md)     | 解压缩文件                                                   |
+| [blockinfile](./moudle/blockinfile.md) | 在指定的文件中插入”一段文本”                                 |
+| [lineinfile](./moudle/lineinfile.md)   | 文件内容修改、在某行前面添加一行、在某行后面添加一行、删除某一行、末尾加入一行、替换或添加某一行 |
+| [cron](./module/cron.md)               | 适用于管理`cron`计划任务的                                   |
+| [yum](./module/yum.md)                 | 主要用于软件的安装                                           |
+| [service](./module/service.md)         | 服务管理                                                     |
+| [user](./module/user.md)               | 用户管理                                                     |
+| [group](./module/group.md)             | 组管理                                                       |
+| [script](./module/script.md)           | 用于执行客户端脚本                                           |
+| [setup](./module/setup.md)             | 搜集信息，用来做监控分析                                     |
 
