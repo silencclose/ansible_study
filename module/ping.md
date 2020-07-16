@@ -18,7 +18,7 @@ ansible  host  -m ping
 
 ```shell
 [root@localhost ~]# ansible testserver -m ping
-10.10.50.10 | SUCCESS => {
+10.10.10.1 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
     },
@@ -31,9 +31,9 @@ ansible  host  -m ping
 
 ```shell
 [root@localhost ~]# ansible testserver -m ping
-10.10.50.10 | UNREACHABLE! => {
+10.10.10.1 | UNREACHABLE! => {
     "changed": false,
-    "msg": "Failed to connect to the host via ssh: root@10.10.50.10: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "msg": "Failed to connect to the host via ssh: root@10.10.10.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
     "unreachable": true
 }
 ```

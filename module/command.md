@@ -18,7 +18,7 @@
 
 ```shell
 [root@localhost ~]# ansible testserver -m command -a "chdir=/root ls"
-10.10.50.10 | CHANGED | rc=0 >>
+10.10.10.1 | CHANGED | rc=0 >>
 anaconda-ks.cfg
 Desktop
 Documents
@@ -48,16 +48,16 @@ Videos
 例子如下：
 
 ```shell
-----进入/root用户后，验证iso目录是否存在，若不存在执行ls
+----进入/root目录后，验证iso目录是否存在，若不存在执行ls
 [root@localhost ~]# ansible testserver -m command -a "chdir=/root removes=/root/iso cmd='ls /root/iso'"
-10.10.50.10 | SUCCESS | rc=0 >>
+10.10.10.1 | SUCCESS | rc=0 >>
 skipped, since /root/iso exists
 ```
 
 ```shell
-----进入/home用户后，验证nginx目录是否存在，若存在执行ls
+----进入/home目录后，验证nginx目录是否存在，若存在执行ls
 [root@localhost ~]# ansible testserver -m command -a "chdir=/home removes=nginx ls nginx "
-10.10.50.10 | CHANGED | rc=0 >>
+10.10.10.1 | CHANGED | rc=0 >>
 nginx
 nginx-1.16.1
 ```
