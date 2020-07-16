@@ -45,6 +45,7 @@
 |recurse|递归的设置文件的属性，只对目录有效|
 |src|要被软连接的源文件的路径，只适用于state=link的情况|
 |dest|被连接到的路径，，只适用于state=link的情况|
+
 例子如下：
 
 ```shell
@@ -63,7 +64,7 @@
 ```shell
 ----为/otp/test.sh创建软连接/opt/ls-test.sh，若已经存在则取消
 [root@localhost ~]# ansible testserver -m file -a "path=/opt/ls-test.sh src=/opt/test.sh force=no state=link"
-192.168.1.205 | CHANGED => {
+10.10.10.1 | CHANGED => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
     },
