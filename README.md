@@ -67,8 +67,8 @@
 | [fetch](./module/fetch.md)             | 用于从远程某主机获取（复制）文件到本地                       |
 | [assemble](./module/assemble.md)       | 将多份配置文件组装为一份配置文件                             |
 | [unarchive](./module/unarchive.md)     | 解压缩文件                                                   |
-| [blockinfile](./moudle/blockinfile.md) | 在指定的文件中插入”一段文本”                                 |
-| [lineinfile](./moudle/lineinfile.md)   | 文件内容修改、在某行前面添加一行、在某行后面添加一行、删除某一行、末尾加入一行、替换或添加某一行 |
+| [blockinfile](./module/blockinfile.md) | 在指定的文件中插入”一段文本”                                 |
+| [lineinfile](./module/lineinfile.md)   | 文件内容修改、在某行前面添加一行、在某行后面添加一行、删除某一行、末尾加入一行、替换或添加某一行 |
 | [cron](./module/cron.md)               | 适用于管理`cron`计划任务的                                   |
 | [yum](./module/yum.md)                 | 主要用于软件的安装                                           |
 | [service](./module/service.md)         | 服务管理                                                     |
