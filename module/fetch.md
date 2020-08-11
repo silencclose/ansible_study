@@ -40,7 +40,7 @@
 ```shell
 ----将目标主机上的/home/testfile.txt文件拉取到/root目录下
 [root@localhost ~]# ansible testserver -m fetch -a 'src=/home/testfile.txt dest=/root/ flat=yes'
-192.168.1.205 | CHANGED => {
+10.10.10.1 | CHANGED => {
     "changed": true,
     "checksum": "fcff57d112692c8f1c3d330714358c59f1c268cc",
     "dest": "/root/testfile.txt",
@@ -53,7 +53,7 @@
 ```shell
 ----将目标主机上的/home/testfile.txt文件拉取到/root目录下,并重命名为test222.txt
 [root@localhost ~]# ansible testserver -m fetch -a 'src=/home/testfile.txt dest=/root/test222.txt flat=yes'
-192.168.1.205 | CHANGED => {
+10.10.10.1 | CHANGED => {
     "changed": true,
     "checksum": "fcff57d112692c8f1c3d330714358c59f1c268cc",
     "dest": "/root/test222.txt",
