@@ -52,7 +52,7 @@ port: 8080
 ```shell
 ----将主机上/home/testfile.txt进行二次更改，并插入到上次更改的block下方
 [root@localhost ~]#  ansible testserver -m blockinfile -a "path=/home/testfile.txt block='logs:/home/testfile.log\npid:/home/testpid' insertafter='host: 0.0.0.0\nport: 8080\n' marker_begin='this is log begin' marker_end='this is pid end'"
-192.168.1.205 | CHANGED => {
+10.10.10.1 | CHANGED => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
     },
