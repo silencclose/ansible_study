@@ -41,7 +41,6 @@
 例子如下：
 
 ```shell
-----将主机上/home/testfile.txt进行二次更改，并插入到上次更改的block下方
 [root@localhost ~]#  ansible testserver -m script -a 'removes=/opt/echothing echothing.sh'
 10.10.10.1 | SKIPPED
 [root@localhost ~]#  ansible testserver -m script -a 'creates=/opt/echothing echothing.sh'

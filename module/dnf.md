@@ -1,33 +1,29 @@
-# user模块
+# yum模块
 
 ## 基本介绍
 
-用户管理模块，具体使用方法见[运维自动化神器ansible之user模块](https://www.cnblogs.com/miaocunf/p/11157365.html)
+ yum模块，通过yum源管理软件包。该模块是通过python2进行管理，如果是python3，请使用[dnf模块](./dnf.md)
 
 ## 格式用法
 
 ```shell
- ansible host -m user -a 'OPTIONS and CMD' 
+ ansible host -m yum -a 'OPTIONS and CMD' 
 ```
 
 例子如下：
 
 ```shell
-[root@localhost ~]# ansible testserver -m user -a "name=nginx append=yes"
-10.10.10.1 | CHANGED => {
+[root@localhost ~]# ansible testserver -m yum -a "name=gcc-c++"
+10.10.10.1 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
     },
-    "append": true,
-    "changed": true,
-    "comment": "",
-    "group": 1001,
-    "home": "/home/nginx",
-    "move_home": false,
-    "name": "nginx",
-    "shell": "/sbin/nologin",
-    "state": "present",
-    "uid": 1001
+    "changed": false,
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "gcc-c++-4.8.5-28.el7.x86_64 providing gcc-c++ is already installed"
+    ]
 }
 ```
 
@@ -50,6 +46,7 @@
 例子如下：
 
 ```shell
+----进入/root目录后，验证iso目录是否存在，若不存在执行“ps -ef|grep java”
 [root@localhost ~]#  ansible testserver -m user  -a "name=testuser uid=2000 "
 10.10.10.1 | CHANGED => {
     "ansible_facts": {
